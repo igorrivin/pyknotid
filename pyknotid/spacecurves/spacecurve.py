@@ -986,7 +986,7 @@ class SpaceCurve(object):
                              np.hstack((self.points[:, 2],
                                       self.points[:, 2][:1])))
 
-        new_points = np.zeros((len(indices), 3), dtype=np.float)
+        new_points = np.zeros((len(indices), 3), dtype=float)
         new_points[:, 0] = interp_xs(indices)
         new_points[:, 1] = interp_ys(indices)
         new_points[:, 2] = interp_zs(indices)
@@ -1079,7 +1079,7 @@ class SpaceCurve(object):
         points = self.points
         ts = np.roll(points, -1, axis=0) - points
 
-        keep_points = np.ones(len(points), dtype=np.bool)
+        keep_points = np.ones(len(points), dtype=bool)
 
         ts_range = ts[:-2] if not closed else ts
 

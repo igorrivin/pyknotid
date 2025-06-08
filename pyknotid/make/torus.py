@@ -106,7 +106,7 @@ class TorusKnot(object):
         divisions = (np.max([self._q, self._p]) *
                      np.min([self._q, self._p]) / self.num_components)
         starting_angles = np.linspace(
-            0, 2*np.pi, divisions + 1)[
+            0, 2*np.pi, int(divisions + 1))[
             :num_components]
         q = self._q / num_components
         p = self._p / num_components

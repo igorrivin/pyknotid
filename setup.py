@@ -1,5 +1,4 @@
-from setuptools import setup, find_packages
-from distutils.extension import Extension
+from setuptools import setup, find_packages, Extension
 
 from os.path import join, sep, dirname
 from os import walk, environ
@@ -116,6 +115,7 @@ setup(
     long_description=long_description,
     author='Alexander Taylor',
     author_email='alexander.taylor@bristol.ac.uk',
+    python_requires='>=3.8',
     install_requires=install_requires,
     ext_modules=ext_modules,
     include_dirs=include_dirs,

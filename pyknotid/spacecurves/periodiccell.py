@@ -456,7 +456,7 @@ def get_linking_between_loop_and_line(loop, line, shape,
     line = OpenKnot.from_periodic_line(line, shape)
 
     line_closure = (line.points[-1] - line.points[0]) / shape[0]
-    line_closure = np.round(line_closure).astype(np.int)
+    line_closure = np.round(line_closure).astype(int)
 
     print('closure is', line_closure)
 
